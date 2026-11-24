@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-11-24 23:08:25",
+  "count": 1,
+  "sources": [
+    {
+      "id": "api-ffzyapi-com",
+      "name": "非凡资源",
+      "type": "maccms_json",
+      "enabled": true,
+      "apiUrl": "https://api.ffzyapi.com/api.php/provide/vod/",
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      },
+      "adFilter": [],
+      "verifySsl": false
+    }
+  ]
+}
