@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-26 00:06:48",
+  "updatedAt": "2026-11-26 06:02:00",
   "count": 5,
   "sources": [
     {
@@ -26,37 +26,6 @@
       "detail": {
         "roadTabs": "",
         "episodeLists": "div.playlist",
-        "episodeItem": "a",
-        "episodeTitle": "@text",
-        "episodeUrl": "@href"
-      },
-      "stream": {
-        "strategy": "webview_sniff"
-      }
-    },
-    {
-      "id": "www-jcydm1-com",
-      "name": "囧次元",
-      "type": "html_css",
-      "enabled": true,
-      "baseUrl": "https://www.jcydm1.com/",
-      "headers": {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-      },
-      "adFilter": [],
-      "verifySsl": false,
-      "search": {
-        "url": "https://www.jcydm1.com/index.php/vod/search.html?wd={keyword}",
-        "method": "GET",
-        "postBody": null,
-        "list": "div.module-card-item-info",
-        "title": ".module-card-item-title@text",
-        "detailUrl": "a@href",
-        "cover": "img@data-src|data-original|src"
-      },
-      "detail": {
-        "roadTabs": "",
-        "episodeLists": "div.module-play-list-content.module-play-list-base",
         "episodeItem": "a",
         "episodeTitle": "@text",
         "episodeUrl": "@href"
@@ -138,6 +107,37 @@
       },
       "adFilter": [],
       "verifySsl": false
+    },
+    {
+      "id": "www-jcydm1-com",
+      "name": "囧次元",
+      "type": "html_css",
+      "enabled": true,
+      "baseUrl": "https://www.jcydm1.com/",
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      },
+      "adFilter": [],
+      "verifySsl": false,
+      "search": {
+        "url": "https://www.jcydm1.com/index.php/vod/search.html?wd={keyword}",
+        "method": "GET",
+        "postBody": null,
+        "list": "div.module-card-item-info",
+        "title": ".module-card-item-title@text",
+        "detailUrl": "a@href",
+        "cover": "img@data-src|data-original|src"
+      },
+      "detail": {
+        "roadTabs": "",
+        "episodeLists": "div.module-play-list-content.module-play-list-base",
+        "episodeItem": "a",
+        "episodeTitle": "@text",
+        "episodeUrl": "@href"
+      },
+      "stream": {
+        "strategy": "webview_sniff"
+      }
     }
   ]
 }
