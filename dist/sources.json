@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-26 18:04:32",
-  "count": 6,
+  "updatedAt": "2026-11-27 00:16:17",
+  "count": 13,
   "sources": [
     {
       "id": "bilfun-cc",
@@ -35,6 +35,18 @@
       }
     },
     {
+      "id": "www-jiujiudongman-com",
+      "name": "www.jiujiudongman.com",
+      "type": "maccms_json",
+      "enabled": true,
+      "apiUrl": "https://www.jiujiudongman.com/api.php/provide/vod/",
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      },
+      "adFilter": [],
+      "verifySsl": false
+    },
+    {
       "id": "www-dcc3-com",
       "name": "MX动漫",
       "type": "html_css",
@@ -46,7 +58,7 @@
       "adFilter": [],
       "verifySsl": false,
       "search": {
-        "url": "https://www.dcc3.com/search/?wd={keyword}",
+        "url": "https://www.dcc3.com/search?wd={keyword}",
         "method": "GET",
         "postBody": null,
         "list": "h3",
@@ -60,6 +72,68 @@
         "episodeItem": "a",
         "episodeTitle": "@text",
         "episodeUrl": "@href"
+      },
+      "stream": {
+        "strategy": "webview_sniff"
+      }
+    },
+    {
+      "id": "www-dudulu-moe",
+      "name": "嘟嘟噜二次元理想乡 (dudulu.moe)",
+      "type": "html_css",
+      "enabled": true,
+      "baseUrl": "https://dudulu.moe/",
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      },
+      "adFilter": [],
+      "verifySsl": false,
+      "search": {
+        "url": "https://dudulu.moe/search?q={keyword}",
+        "method": "GET",
+        "postBody": null,
+        "list": "div.group.flex.flex-col.justify-between.overflow-hidden.rounded-xl.border.bg-white.shadow-2xs.transition-all.duration-300",
+        "title": "a@text",
+        "detailUrl": "a@href",
+        "cover": "img@data-src|data-original|src"
+      },
+      "detail": {
+        "roadTabs": "",
+        "episodeLists": "div.inline-flex.items-center.gap-1",
+        "episodeItem": "a",
+        "episodeTitle": "@text",
+        "episodeUrl": "@href"
+      },
+      "stream": {
+        "strategy": "webview_sniff"
+      }
+    },
+    {
+      "id": "www-gpjda-com",
+      "name": "萌道动漫",
+      "type": "html_css",
+      "enabled": true,
+      "baseUrl": "https://www.gpjda.com/",
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      },
+      "adFilter": [],
+      "verifySsl": false,
+      "search": {
+        "url": "https://www.gpjda.com/index.php/vod/search.html?wd={keyword}",
+        "method": "GET",
+        "postBody": null,
+        "list": ".stui-vodlist li",
+        "title": "css@title|text",
+        "detailUrl": "a@href",
+        "cover": "img@data-original|data-src|src"
+      },
+      "detail": {
+        "roadTabs": "",
+        "episodeLists": ".stui-content__playlist",
+        "episodeItem": "a",
+        "episodeTitle": "css@text",
+        "episodeUrl": "css@href"
       },
       "stream": {
         "strategy": "webview_sniff"
@@ -80,14 +154,45 @@
         "url": "https://www.jcydm1.com/index.php/vod/search.html?wd={keyword}",
         "method": "GET",
         "postBody": null,
-        "list": "div.module-card-item-info",
-        "title": ".module-card-item-title@text",
+        "list": ".module-card-item",
+        "title": "css@title|text",
+        "detailUrl": "a@href",
+        "cover": "img@data-original|data-src|src"
+      },
+      "detail": {
+        "roadTabs": "",
+        "episodeLists": ".module-play-list-content",
+        "episodeItem": "a",
+        "episodeTitle": "css@text",
+        "episodeUrl": "css@href"
+      },
+      "stream": {
+        "strategy": "webview_sniff"
+      }
+    },
+    {
+      "id": "www-agedm-io",
+      "name": "AGE动漫",
+      "type": "html_css",
+      "enabled": true,
+      "baseUrl": "https://www.agedm.io/",
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      },
+      "adFilter": [],
+      "verifySsl": false,
+      "search": {
+        "url": "https://www.agedm.io/search?query={keyword}",
+        "method": "GET",
+        "postBody": null,
+        "list": "div.card.cata_video_item.py-4",
+        "title": ".card-title@text",
         "detailUrl": "a@href",
         "cover": "img@data-src|data-original|src"
       },
       "detail": {
-        "roadTabs": "",
-        "episodeLists": "div.module-play-list-content.module-play-list-base",
+        "roadTabs": "button.nav-link@text",
+        "episodeLists": "ul.video_detail_episode",
         "episodeItem": "a",
         "episodeTitle": "@text",
         "episodeUrl": "@href"
@@ -97,16 +202,97 @@
       }
     },
     {
-      "id": "api-ffzyapi-com",
-      "name": "非凡资源",
-      "type": "maccms_json",
+      "id": "www-dmghg1-com",
+      "name": "动漫共和国",
+      "type": "html_css",
       "enabled": true,
-      "apiUrl": "https://api.ffzyapi.com/api.php/provide/vod/",
+      "baseUrl": "https://www.dmghg1.com/",
       "headers": {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
       },
       "adFilter": [],
-      "verifySsl": false
+      "verifySsl": false,
+      "search": {
+        "url": "https://www.dmghg1.com/index.php/vod/search.html?wd={keyword}",
+        "method": "GET",
+        "postBody": null,
+        "list": ".module-card-item",
+        "title": "css@title|text",
+        "detailUrl": "a@href",
+        "cover": "img@data-original|data-src|src"
+      },
+      "detail": {
+        "roadTabs": "",
+        "episodeLists": ".module-play-list-content",
+        "episodeItem": "a",
+        "episodeTitle": "css@text",
+        "episodeUrl": "css@href"
+      },
+      "stream": {
+        "strategy": "webview_sniff"
+      }
+    },
+    {
+      "id": "omofun-in",
+      "name": "OmoFun动漫视频网",
+      "type": "html_css",
+      "enabled": true,
+      "baseUrl": "https://omofun.in/",
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      },
+      "adFilter": [],
+      "verifySsl": false,
+      "search": {
+        "url": "https://omofun.in/vod/search.html?wd={keyword}",
+        "method": "GET",
+        "postBody": null,
+        "list": ".module-card-item",
+        "title": "css@title|text",
+        "detailUrl": "a@href",
+        "cover": "img@data-original|data-src|src"
+      },
+      "detail": {
+        "roadTabs": "",
+        "episodeLists": ".module-play-list-content",
+        "episodeItem": "a",
+        "episodeTitle": "css@text",
+        "episodeUrl": "css@href"
+      },
+      "stream": {
+        "strategy": "webview_sniff"
+      }
+    },
+    {
+      "id": "www-dmgh4-cc",
+      "name": "动漫共和国官网",
+      "type": "html_css",
+      "enabled": true,
+      "baseUrl": "https://www.dmgh4.cc/",
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      },
+      "adFilter": [],
+      "verifySsl": false,
+      "search": {
+        "url": "https://www.dmgh4.cc/index.php/search/index?wd={keyword}",
+        "method": "GET",
+        "postBody": null,
+        "list": ".module-card-item",
+        "title": "css@title|text",
+        "detailUrl": "a@href",
+        "cover": "img@data-original|data-src|src"
+      },
+      "detail": {
+        "roadTabs": "",
+        "episodeLists": ".module-play-list-content",
+        "episodeItem": "a",
+        "episodeTitle": "css@text",
+        "episodeUrl": "css@href"
+      },
+      "stream": {
+        "strategy": "webview_sniff"
+      }
     },
     {
       "id": "www-fqdm-cc",
@@ -138,6 +324,18 @@
       "stream": {
         "strategy": "webview_sniff"
       }
+    },
+    {
+      "id": "api-ffzyapi-com",
+      "name": "非凡资源",
+      "type": "maccms_json",
+      "enabled": true,
+      "apiUrl": "https://api.ffzyapi.com/api.php/provide/vod/",
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      },
+      "adFilter": [],
+      "verifySsl": false
     },
     {
       "id": "www-dmmiku-com",
