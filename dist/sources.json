@@ -1,39 +1,8 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-27 18:08:40",
-  "count": 15,
+  "updatedAt": "2026-11-28 00:13:27",
+  "count": 13,
   "sources": [
-    {
-      "id": "bilfun-cc",
-      "name": "BILFUN影视大全",
-      "type": "html_css",
-      "enabled": true,
-      "baseUrl": "https://bilfun.cc/",
-      "headers": {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-      },
-      "adFilter": [],
-      "verifySsl": false,
-      "search": {
-        "url": "https://bilfun.cc/index.php/vod/search.html?wd={keyword}",
-        "method": "GET",
-        "postBody": null,
-        "list": ".myui-vodlist__box",
-        "title": "css@title|text",
-        "detailUrl": "a@href",
-        "cover": "img@data-original|data-src|src"
-      },
-      "detail": {
-        "roadTabs": "",
-        "episodeLists": ".myui-content__list",
-        "episodeItem": "a",
-        "episodeTitle": "css@text",
-        "episodeUrl": "css@href"
-      },
-      "stream": {
-        "strategy": "webview_sniff"
-      }
-    },
     {
       "id": "www-jiujiudongman-com",
       "name": "www.jiujiudongman.com",
@@ -44,69 +13,7 @@
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
       },
       "adFilter": [],
-      "verifySsl": false
-    },
-    {
-      "id": "www-gpjda-com",
-      "name": "萌道动漫",
-      "type": "html_css",
-      "enabled": true,
-      "baseUrl": "https://www.gpjda.com/",
-      "headers": {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-      },
-      "adFilter": [],
-      "verifySsl": false,
-      "search": {
-        "url": "https://www.gpjda.com/index.php/vod/search.html?wd={keyword}",
-        "method": "GET",
-        "postBody": null,
-        "list": ".stui-vodlist li",
-        "title": "css@title|text",
-        "detailUrl": "a@href",
-        "cover": "img@data-original|data-src|src"
-      },
-      "detail": {
-        "roadTabs": "",
-        "episodeLists": ".stui-content__playlist",
-        "episodeItem": "a",
-        "episodeTitle": "css@text",
-        "episodeUrl": "css@href"
-      },
-      "stream": {
-        "strategy": "webview_sniff"
-      }
-    },
-    {
-      "id": "www-jcydm1-com",
-      "name": "囧次元",
-      "type": "html_css",
-      "enabled": true,
-      "baseUrl": "https://www.jcydm1.com/",
-      "headers": {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-      },
-      "adFilter": [],
-      "verifySsl": false,
-      "search": {
-        "url": "https://www.jcydm1.com/index.php/vod/search.html?wd={keyword}",
-        "method": "GET",
-        "postBody": null,
-        "list": ".module-card-item",
-        "title": "css@title|text",
-        "detailUrl": "a@href",
-        "cover": "img@data-original|data-src|src"
-      },
-      "detail": {
-        "roadTabs": "",
-        "episodeLists": ".module-play-list-content",
-        "episodeItem": "a",
-        "episodeTitle": "css@text",
-        "episodeUrl": "css@href"
-      },
-      "stream": {
-        "strategy": "webview_sniff"
-      }
+      "verifySsl": true
     },
     {
       "id": "www-dcc3-com",
@@ -118,7 +25,7 @@
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
       },
       "adFilter": [],
-      "verifySsl": false,
+      "verifySsl": true,
       "search": {
         "url": "https://www.dcc3.com/search?wd={keyword}",
         "method": "GET",
@@ -140,31 +47,31 @@
       }
     },
     {
-      "id": "www-dmmiku-com",
-      "name": "动漫MIKU",
+      "id": "www-jcydm1-com",
+      "name": "囧次元",
       "type": "html_css",
       "enabled": true,
-      "baseUrl": "https://www.dmmiku.com/",
+      "baseUrl": "https://www.jcydm1.com/",
       "headers": {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
       },
       "adFilter": [],
-      "verifySsl": false,
+      "verifySsl": true,
       "search": {
-        "url": "https://www.dmmiku.com/index.php/vod/search.html?wd={keyword}",
+        "url": "https://www.jcydm1.com/index.php/vod/search.html?wd={keyword}",
         "method": "GET",
         "postBody": null,
-        "list": "li.searchlist_item",
-        "title": ".vodlist_title@text",
+        "list": ".module-card-item",
+        "title": "css@title|text",
         "detailUrl": "a@href",
-        "cover": "img@data-src|data-original|src"
+        "cover": "img@data-original|data-src|src"
       },
       "detail": {
         "roadTabs": "",
-        "episodeLists": "ul.content_playlist.clearfix",
+        "episodeLists": ".module-play-list-content",
         "episodeItem": "a",
-        "episodeTitle": "@text",
-        "episodeUrl": "@href"
+        "episodeTitle": "css@text",
+        "episodeUrl": "css@href"
       },
       "stream": {
         "strategy": "webview_sniff"
@@ -180,7 +87,7 @@
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
       },
       "adFilter": [],
-      "verifySsl": false,
+      "verifySsl": true,
       "search": {
         "url": "https://dudulu.moe/search?q={keyword}",
         "method": "GET",
@@ -193,6 +100,161 @@
       "detail": {
         "roadTabs": "",
         "episodeLists": "div.inline-flex.items-center.gap-1",
+        "episodeItem": "a",
+        "episodeTitle": "@text",
+        "episodeUrl": "@href"
+      },
+      "stream": {
+        "strategy": "webview_sniff"
+      }
+    },
+    {
+      "id": "www-fqdm-cc",
+      "name": "番茄动漫 二次元的异世界之旅",
+      "type": "html_css",
+      "enabled": true,
+      "baseUrl": "https://www.fqdm.cc/",
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      },
+      "adFilter": [],
+      "verifySsl": true,
+      "search": {
+        "url": "https://www.fqdm.cc/index.php/vod/search.html?wd={keyword}",
+        "method": "GET",
+        "postBody": null,
+        "list": "div.module-card-item-info",
+        "title": ".module-card-item-title@text",
+        "detailUrl": "a@href",
+        "cover": "img@data-src|data-original|src"
+      },
+      "detail": {
+        "roadTabs": "",
+        "episodeLists": "div.module-play-list-content.module-play-list-larger",
+        "episodeItem": "a",
+        "episodeTitle": "@text",
+        "episodeUrl": "@href"
+      },
+      "stream": {
+        "strategy": "webview_sniff"
+      }
+    },
+    {
+      "id": "gugu-fan",
+      "name": "日本动漫索引大全",
+      "type": "html_css",
+      "enabled": true,
+      "baseUrl": "https://gugu.fan/anime",
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      },
+      "adFilter": [],
+      "verifySsl": true,
+      "search": {
+        "url": "https://gugu.fan/search?q={keyword}",
+        "method": "GET",
+        "postBody": null,
+        "list": "article.schedule-card.search-result-card",
+        "title": "a@text",
+        "detailUrl": "a@href",
+        "cover": "img@data-src|data-original|src"
+      },
+      "detail": {
+        "roadTabs": "",
+        "episodeLists": "div.detail-play-card.p-space-lg.rounded-2xl.bg-surface-container-lowest.flex.flex-col.justify-between.gap-gutter",
+        "episodeItem": "a",
+        "episodeTitle": "@text",
+        "episodeUrl": "@href"
+      },
+      "stream": {
+        "strategy": "webview_sniff"
+      }
+    },
+    {
+      "id": "omofun-in",
+      "name": "OmoFun动漫视频网",
+      "type": "html_css",
+      "enabled": true,
+      "baseUrl": "https://omofun.in/",
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      },
+      "adFilter": [],
+      "verifySsl": true,
+      "search": {
+        "url": "https://omofun.in/vod/search.html?wd={keyword}",
+        "method": "GET",
+        "postBody": null,
+        "list": ".module-card-item",
+        "title": "css@title|text",
+        "detailUrl": "a@href",
+        "cover": "img@data-original|data-src|src"
+      },
+      "detail": {
+        "roadTabs": "",
+        "episodeLists": ".module-play-list-content",
+        "episodeItem": "a",
+        "episodeTitle": "css@text",
+        "episodeUrl": "css@href"
+      },
+      "stream": {
+        "strategy": "webview_sniff"
+      }
+    },
+    {
+      "id": "www-gpjda-com",
+      "name": "萌道动漫",
+      "type": "html_css",
+      "enabled": true,
+      "baseUrl": "https://www.gpjda.com/",
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      },
+      "adFilter": [],
+      "verifySsl": true,
+      "search": {
+        "url": "https://www.gpjda.com/index.php/vod/search.html?wd={keyword}",
+        "method": "GET",
+        "postBody": null,
+        "list": ".stui-vodlist li",
+        "title": "css@title|text",
+        "detailUrl": "a@href",
+        "cover": "img@data-original|data-src|src"
+      },
+      "detail": {
+        "roadTabs": "",
+        "episodeLists": ".stui-content__playlist",
+        "episodeItem": "a",
+        "episodeTitle": "css@text",
+        "episodeUrl": "css@href"
+      },
+      "stream": {
+        "strategy": "webview_sniff"
+      }
+    },
+    {
+      "id": "www-dmmiku-com",
+      "name": "动漫MIKU",
+      "type": "html_css",
+      "enabled": true,
+      "baseUrl": "https://www.dmmiku.com/",
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      },
+      "adFilter": [],
+      "verifySsl": true,
+      "search": {
+        "url": "https://www.dmmiku.com/index.php/vod/search.html?wd={keyword}",
+        "method": "GET",
+        "postBody": null,
+        "list": "li.searchlist_item",
+        "title": ".vodlist_title@text",
+        "detailUrl": "a@href",
+        "cover": "img@data-src|data-original|src"
+      },
+      "detail": {
+        "roadTabs": "",
+        "episodeLists": "ul.content_playlist.clearfix",
         "episodeItem": "a",
         "episodeTitle": "@text",
         "episodeUrl": "@href"
@@ -233,68 +295,6 @@
       }
     },
     {
-      "id": "www-fqdm-cc",
-      "name": "番茄动漫 二次元的异世界之旅",
-      "type": "html_css",
-      "enabled": true,
-      "baseUrl": "https://www.fqdm.cc/",
-      "headers": {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-      },
-      "adFilter": [],
-      "verifySsl": false,
-      "search": {
-        "url": "https://www.fqdm.cc/index.php/vod/search.html?wd={keyword}",
-        "method": "GET",
-        "postBody": null,
-        "list": "div.module-card-item-info",
-        "title": ".module-card-item-title@text",
-        "detailUrl": "a@href",
-        "cover": "img@data-src|data-original|src"
-      },
-      "detail": {
-        "roadTabs": "",
-        "episodeLists": "div.module-play-list-content.module-play-list-larger",
-        "episodeItem": "a",
-        "episodeTitle": "@text",
-        "episodeUrl": "@href"
-      },
-      "stream": {
-        "strategy": "webview_sniff"
-      }
-    },
-    {
-      "id": "omofun-in",
-      "name": "OmoFun动漫视频网",
-      "type": "html_css",
-      "enabled": true,
-      "baseUrl": "https://omofun.in/",
-      "headers": {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-      },
-      "adFilter": [],
-      "verifySsl": false,
-      "search": {
-        "url": "https://omofun.in/vod/search.html?wd={keyword}",
-        "method": "GET",
-        "postBody": null,
-        "list": ".module-card-item",
-        "title": "css@title|text",
-        "detailUrl": "a@href",
-        "cover": "img@data-original|data-src|src"
-      },
-      "detail": {
-        "roadTabs": "",
-        "episodeLists": ".module-play-list-content",
-        "episodeItem": "a",
-        "episodeTitle": "css@text",
-        "episodeUrl": "css@href"
-      },
-      "stream": {
-        "strategy": "webview_sniff"
-      }
-    },
-    {
       "id": "www-dmghg1-com",
       "name": "动漫共和国",
       "type": "html_css",
@@ -304,7 +304,7 @@
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
       },
       "adFilter": [],
-      "verifySsl": false,
+      "verifySsl": true,
       "search": {
         "url": "https://www.dmghg1.com/index.php/vod/search.html?wd={keyword}",
         "method": "GET",
@@ -326,37 +326,6 @@
       }
     },
     {
-      "id": "gugu-fan",
-      "name": "日本动漫索引大全",
-      "type": "html_css",
-      "enabled": true,
-      "baseUrl": "https://gugu.fan/anime",
-      "headers": {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-      },
-      "adFilter": [],
-      "verifySsl": false,
-      "search": {
-        "url": "https://gugu.fan/search?q={keyword}",
-        "method": "GET",
-        "postBody": null,
-        "list": "article.schedule-card.search-result-card",
-        "title": "a@text",
-        "detailUrl": "a@href",
-        "cover": "img@data-src|data-original|src"
-      },
-      "detail": {
-        "roadTabs": "",
-        "episodeLists": "div.detail-play-card.p-space-lg.rounded-2xl.bg-surface-container-lowest.flex.flex-col.justify-between.gap-gutter",
-        "episodeItem": "a",
-        "episodeTitle": "@text",
-        "episodeUrl": "@href"
-      },
-      "stream": {
-        "strategy": "webview_sniff"
-      }
-    },
-    {
       "id": "www-dmgh4-cc",
       "name": "动漫共和国官网",
       "type": "html_css",
@@ -366,7 +335,7 @@
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
       },
       "adFilter": [],
-      "verifySsl": false,
+      "verifySsl": true,
       "search": {
         "url": "https://www.dmgh4.cc/index.php/search/index?wd={keyword}",
         "method": "GET",
@@ -397,38 +366,7 @@
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
       },
       "adFilter": [],
-      "verifySsl": false
-    },
-    {
-      "id": "www-conveyerail-com",
-      "name": "风之动漫",
-      "type": "html_css",
-      "enabled": true,
-      "baseUrl": "https://www.conveyerail.com/",
-      "headers": {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-      },
-      "adFilter": [],
-      "verifySsl": false,
-      "search": {
-        "url": "https://www.conveyerail.com/index.php/vod/search.html?wd={keyword}",
-        "method": "GET",
-        "postBody": null,
-        "list": ".fed-list-item",
-        "title": "css@title|text",
-        "detailUrl": "a@href",
-        "cover": "img@data-original|data-src|src"
-      },
-      "detail": {
-        "roadTabs": "",
-        "episodeLists": ".myui-content__list",
-        "episodeItem": "a",
-        "episodeTitle": "css@text",
-        "episodeUrl": "css@href"
-      },
-      "stream": {
-        "strategy": "webview_sniff"
-      }
+      "verifySsl": true
     }
   ]
 }
