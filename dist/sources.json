@@ -1,20 +1,8 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-11-28 12:10:47",
+  "updatedAt": "2026-11-28 18:13:25",
   "count": 15,
   "sources": [
-    {
-      "id": "www-jiujiudongman-com",
-      "name": "www.jiujiudongman.com",
-      "type": "maccms_json",
-      "enabled": true,
-      "apiUrl": "https://www.jiujiudongman.com/api.php/provide/vod/",
-      "headers": {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-      },
-      "adFilter": [],
-      "verifySsl": true
-    },
     {
       "id": "www-7sefun-top",
       "name": "七色番动漫视频网",
@@ -47,6 +35,18 @@
       }
     },
     {
+      "id": "www-jiujiudongman-com",
+      "name": "www.jiujiudongman.com",
+      "type": "maccms_json",
+      "enabled": true,
+      "apiUrl": "https://www.jiujiudongman.com/api.php/provide/vod/",
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      },
+      "adFilter": [],
+      "verifySsl": true
+    },
+    {
       "id": "www-dcc3-com",
       "name": "MX动漫",
       "type": "html_css",
@@ -72,6 +72,68 @@
         "episodeItem": "a",
         "episodeTitle": "@text",
         "episodeUrl": "@href"
+      },
+      "stream": {
+        "strategy": "webview_sniff"
+      }
+    },
+    {
+      "id": "www-jcydm1-com",
+      "name": "囧次元",
+      "type": "html_css",
+      "enabled": true,
+      "baseUrl": "https://www.jcydm1.com/",
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      },
+      "adFilter": [],
+      "verifySsl": true,
+      "search": {
+        "url": "https://www.jcydm1.com/index.php/vod/search.html?wd={keyword}",
+        "method": "GET",
+        "postBody": null,
+        "list": ".module-card-item",
+        "title": "css@title|text",
+        "detailUrl": "a@href",
+        "cover": "img@data-original|data-src|src"
+      },
+      "detail": {
+        "roadTabs": "",
+        "episodeLists": ".module-play-list-content",
+        "episodeItem": "a",
+        "episodeTitle": "css@text",
+        "episodeUrl": "css@href"
+      },
+      "stream": {
+        "strategy": "webview_sniff"
+      }
+    },
+    {
+      "id": "www-gpjda-com",
+      "name": "萌道动漫",
+      "type": "html_css",
+      "enabled": true,
+      "baseUrl": "https://www.gpjda.com/",
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      },
+      "adFilter": [],
+      "verifySsl": true,
+      "search": {
+        "url": "https://www.gpjda.com/index.php/vod/search.html?wd={keyword}",
+        "method": "GET",
+        "postBody": null,
+        "list": ".stui-vodlist li",
+        "title": "css@title|text",
+        "detailUrl": "a@href",
+        "cover": "img@data-original|data-src|src"
+      },
+      "detail": {
+        "roadTabs": "",
+        "episodeLists": ".stui-content__playlist",
+        "episodeItem": "a",
+        "episodeTitle": "css@text",
+        "episodeUrl": "css@href"
       },
       "stream": {
         "strategy": "webview_sniff"
@@ -140,68 +202,6 @@
       }
     },
     {
-      "id": "www-jcydm1-com",
-      "name": "囧次元",
-      "type": "html_css",
-      "enabled": true,
-      "baseUrl": "https://www.jcydm1.com/",
-      "headers": {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-      },
-      "adFilter": [],
-      "verifySsl": true,
-      "search": {
-        "url": "https://www.jcydm1.com/index.php/vod/search.html?wd={keyword}",
-        "method": "GET",
-        "postBody": null,
-        "list": ".module-card-item",
-        "title": "css@title|text",
-        "detailUrl": "a@href",
-        "cover": "img@data-original|data-src|src"
-      },
-      "detail": {
-        "roadTabs": "",
-        "episodeLists": ".module-play-list-content",
-        "episodeItem": "a",
-        "episodeTitle": "css@text",
-        "episodeUrl": "css@href"
-      },
-      "stream": {
-        "strategy": "webview_sniff"
-      }
-    },
-    {
-      "id": "www-fqdm-cc",
-      "name": "番茄动漫 二次元的异世界之旅",
-      "type": "html_css",
-      "enabled": true,
-      "baseUrl": "https://www.fqdm.cc/",
-      "headers": {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-      },
-      "adFilter": [],
-      "verifySsl": true,
-      "search": {
-        "url": "https://www.fqdm.cc/index.php/vod/search.html?wd={keyword}",
-        "method": "GET",
-        "postBody": null,
-        "list": "div.module-card-item-info",
-        "title": ".module-card-item-title@text",
-        "detailUrl": "a@href",
-        "cover": "img@data-src|data-original|src"
-      },
-      "detail": {
-        "roadTabs": "",
-        "episodeLists": "div.module-play-list-content.module-play-list-larger",
-        "episodeItem": "a",
-        "episodeTitle": "@text",
-        "episodeUrl": "@href"
-      },
-      "stream": {
-        "strategy": "webview_sniff"
-      }
-    },
-    {
       "id": "www-agedm-io",
       "name": "AGE动漫",
       "type": "html_css",
@@ -231,18 +231,6 @@
       "stream": {
         "strategy": "webview_sniff"
       }
-    },
-    {
-      "id": "api-ffzyapi-com",
-      "name": "非凡资源",
-      "type": "maccms_json",
-      "enabled": true,
-      "apiUrl": "https://api.ffzyapi.com/api.php/provide/vod/",
-      "headers": {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-      },
-      "adFilter": [],
-      "verifySsl": true
     },
     {
       "id": "www-dmmiku-com",
@@ -276,18 +264,18 @@
       }
     },
     {
-      "id": "www-dmghg1-com",
-      "name": "动漫共和国",
+      "id": "www-dmgh4-cc",
+      "name": "动漫共和国官网",
       "type": "html_css",
       "enabled": true,
-      "baseUrl": "https://www.dmghg1.com/",
+      "baseUrl": "https://www.dmgh4.cc/",
       "headers": {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
       },
       "adFilter": [],
       "verifySsl": true,
       "search": {
-        "url": "https://www.dmghg1.com/index.php/vod/search.html?wd={keyword}",
+        "url": "https://www.dmgh4.cc/index.php/search/index?wd={keyword}",
         "method": "GET",
         "postBody": null,
         "list": ".module-card-item",
@@ -298,37 +286,6 @@
       "detail": {
         "roadTabs": "",
         "episodeLists": ".module-play-list-content",
-        "episodeItem": "a",
-        "episodeTitle": "css@text",
-        "episodeUrl": "css@href"
-      },
-      "stream": {
-        "strategy": "webview_sniff"
-      }
-    },
-    {
-      "id": "www-gpjda-com",
-      "name": "萌道动漫",
-      "type": "html_css",
-      "enabled": true,
-      "baseUrl": "https://www.gpjda.com/",
-      "headers": {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-      },
-      "adFilter": [],
-      "verifySsl": true,
-      "search": {
-        "url": "https://www.gpjda.com/index.php/vod/search.html?wd={keyword}",
-        "method": "GET",
-        "postBody": null,
-        "list": ".stui-vodlist li",
-        "title": "css@title|text",
-        "detailUrl": "a@href",
-        "cover": "img@data-original|data-src|src"
-      },
-      "detail": {
-        "roadTabs": "",
-        "episodeLists": ".stui-content__playlist",
         "episodeItem": "a",
         "episodeTitle": "css@text",
         "episodeUrl": "css@href"
@@ -369,18 +326,18 @@
       }
     },
     {
-      "id": "www-dmgh4-cc",
-      "name": "动漫共和国官网",
+      "id": "www-dmghg1-com",
+      "name": "动漫共和国",
       "type": "html_css",
       "enabled": true,
-      "baseUrl": "https://www.dmgh4.cc/",
+      "baseUrl": "https://www.dmghg1.com/",
       "headers": {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
       },
       "adFilter": [],
       "verifySsl": true,
       "search": {
-        "url": "https://www.dmgh4.cc/index.php/search/index?wd={keyword}",
+        "url": "https://www.dmghg1.com/index.php/vod/search.html?wd={keyword}",
         "method": "GET",
         "postBody": null,
         "list": ".module-card-item",
@@ -394,6 +351,49 @@
         "episodeItem": "a",
         "episodeTitle": "css@text",
         "episodeUrl": "css@href"
+      },
+      "stream": {
+        "strategy": "webview_sniff"
+      }
+    },
+    {
+      "id": "api-ffzyapi-com",
+      "name": "非凡资源",
+      "type": "maccms_json",
+      "enabled": true,
+      "apiUrl": "https://api.ffzyapi.com/api.php/provide/vod/",
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      },
+      "adFilter": [],
+      "verifySsl": true
+    },
+    {
+      "id": "www-fqdm-cc",
+      "name": "番茄动漫 二次元的异世界之旅",
+      "type": "html_css",
+      "enabled": true,
+      "baseUrl": "https://www.fqdm.cc/",
+      "headers": {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+      },
+      "adFilter": [],
+      "verifySsl": true,
+      "search": {
+        "url": "https://www.fqdm.cc/index.php/vod/search.html?wd={keyword}",
+        "method": "GET",
+        "postBody": null,
+        "list": "div.module-card-item-info",
+        "title": ".module-card-item-title@text",
+        "detailUrl": "a@href",
+        "cover": "img@data-src|data-original|src"
+      },
+      "detail": {
+        "roadTabs": "",
+        "episodeLists": "div.module-play-list-content.module-play-list-larger",
+        "episodeItem": "a",
+        "episodeTitle": "@text",
+        "episodeUrl": "@href"
       },
       "stream": {
         "strategy": "webview_sniff"
